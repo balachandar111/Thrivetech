@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -188,7 +189,7 @@
         }
         .search-bar select {
             appearance: none;
-            background-image: url('drop.png');
+            background-image:url("{% static 'img/drop.png' %}");
             background-repeat: no-repeat;
             background-position: right 10px center;
             background-size: 10px;
@@ -309,7 +310,7 @@
         <div class="container-fluid" style="margin-left: 50px;margin-right:50px;">
             <div class="navbar-brand">
                 <a href="#">
-                    <img src="logo.png" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
+                    <img src="{%static 'img/logo.png'%}" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
                 </a>
                 <div><div style="color: white; font-family: Kumbh Sans, serif;font-weight:900;font-size:20px;letter-spacing:6px;">THRIVE TECH</div>
                     <div class="brand-tagline" style="margin-left: 15px;">Innovation in Every Step</div>
@@ -317,13 +318,13 @@
             </div>
     
             <button class="navbar-toggler"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
-                <span><img src="burger.png" style="height:30px;" alt="Hamburger Icon"></span>
+                <span><img src="{%static 'img/burger.png'%}" style="height:30px;" alt="Hamburger Icon"></span>
             </button>
             <div class="na">
             <div class="navbar-nav justify-content-space-around">
                 <ul class="navbar-nav">
                     <li class="nav-item" style="margin-right: 40px;">
-                        <a class="nav-link" href="#"onclick="showMain()"  style="color: white;">What we Do<img src="icon.png" style="margin-left: 5px;" alt=""></a>
+                        <a class="nav-link" href="#"onclick="showMain()"  style="color: white;">What we Do<img src="{%static 'img/icon.png'%}" style="margin-left: 5px;" alt=""></a>
                         
                     </li>
                     <li class="nav-item">
@@ -345,16 +346,16 @@
             <div class="row" style="margin-top: -20px;" >
                 <!-- Sidebar -->
                 <div class="col-md-3 mt-4  w-10 sidebar custom-margin"  >
-                    <a href="#" onclick="showAtlassianSupport()"style="padding-top:60px;" class="link" >Atlassian Support <img src="Vector.png"style="float: right;
+                    <a href="#" onclick="showAtlassianSupport()"style="padding-top:60px;" class="link" >Atlassian Support <img src="{%static 'img/Vector.png'%}"style="float: right;
         margin-left: -60px;
         color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-                    <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="Vector.png"style="float: right;
+                    <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="{%static 'img/Vector.png'%}"style="float: right;
                       margin-left: -60px;
                       color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-                    <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="Vector.png"style="float: right;
+                    <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
                       margin-left: -60px;
                       color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-                    <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="Vector.png"style="float: right;
+                    <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
                       margin-left: -60px;
                       color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
                 </div>
@@ -375,7 +376,7 @@
             <ul class="navbar-nav" style="font-size: 20px;"id="mainMenu">
                 <li class="nav-item">
                     <a class="nav-link" style="font-size: 25px;font-family:'poppins'sans-serif;" href="#" id="whatWeDoBtn">What we Do
-                        <img src="icon.png" style="margin-left: 150px;" alt="">
+                        <img src="{%static 'img/icon.png'%}" style="margin-left: 150px;" alt="">
                     </a>
                 </li>
                 <li class="nav-item">
@@ -395,16 +396,16 @@
                 </a>
               </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="icon.png" style="margin-left: 140px;" alt=""></a>
+                    <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;" alt=""></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="icon.png" style="margin-left: 149px;" alt=""></a>
+                    <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="{%static 'img/icon.png'%}" style="margin-left: 149px;" alt=""></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="icon.png" style="margin-left: 129px;"></a>
+                    <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="{%static 'img/icon.png'%}" style="margin-left: 129px;"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="icon.png" style="margin-left: 140px;"></a>
+                    <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;"></a>
                 </li>
                
             </ul>
@@ -518,7 +519,7 @@
             </select>
         </div>
         <div class="col-md-3 mb-3">
-            <button class="btn w-50" style= "background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"> <img src="lens.png"  style="width:17px;height:17px;margin-right:5px;"> Search</button>
+            <button class="btn w-50" style= "background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"> <img src="{%static 'img/lens.png'%}"  style="width:17px;height:17px;margin-right:5px;"> Search</button>
 
         </div>
     </div>
@@ -655,10 +656,10 @@
         <span style="margin-left: 10px;">Follow us</span>
         <div>
             <a href="https://www.linkedin.com/company/thrive-tech-cuddalore/" style="text-decoration: none; color: #8a8a8a;">
-                <img src="linkedin.png" alt="LinkedIn Icon">
+                <img src="{%static 'img/linkedin.png'%}" alt="LinkedIn Icon">
             </a>
             <a href="https://www.instagram.com/thrive_tech_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none; color: #8a8a8a;">
-                <img src="insta.png" alt="Instagram Icon">
+                <img src="{%static 'img/insta.png'%}" alt="Instagram Icon">
             </a>
         </div>
     </div>

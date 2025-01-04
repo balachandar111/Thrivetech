@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -467,7 +468,7 @@
     <div class="container-fluid" style="margin-left: 50px;margin-right:50px;">
         <div class="navbar-brand">
             <a href="#">
-                <img src="logo.png" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
+                <img src="{%static 'img/logo.png'%}" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
             </a>
             <div>
               <div style="color: white; font-family: Kumbh Sans, serif;font-weight:900;font-size:20px;letter-spacing:6px;">THRIVE TECH</div>
@@ -476,13 +477,13 @@
         </div>
 
         <button class="navbar-toggler"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
-            <span><img src="burger.png" style="height:30px;" alt="Hamburger Icon"></span>
+            <span><img src="{%static 'img/burger.png'%}" style="height:30px;" alt="Hamburger Icon"></span>
         </button>
         <div class="na">
         <div class="navbar-nav justify-content-space-around">
             <ul class="navbar-nav">
                 <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link" href="#"onclick="showMain()"  style="color: white;">What we Do<img src="icon.png" style="margin-left: 5px;" alt=""></a>
+                    <a class="nav-link" href="#"onclick="showMain()"  style="color: white;">What we Do<img src="{%static 'img/icon.png'%}" style="margin-left: 5px;" alt=""></a>
                     
                 </li>
                 <li class="nav-item">
@@ -508,7 +509,7 @@
     <ul class="navbar-nav" style="font-size: 20px;"id="mainMenu">
         <li class="nav-item">
             <a class="nav-link" style="font-size: 25px;font-family:'poppins'sans-serif;" href="#" id="whatWeDoBtn">What we Do
-                <img src="icon.png" style="margin-left: 150px;" alt="">
+                <img src="{%static 'img/icon.png'%}" style="margin-left: 150px;" alt="">
             </a>
         </li>
         <li class="nav-item">
@@ -528,16 +529,16 @@
         </a>
       </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="icon.png" style="margin-left: 140px;" alt=""></a>
+            <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;" alt=""></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="icon.png" style="margin-left: 149px;" alt=""></a>
+            <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="{%static 'img/icon.png'%}" style="margin-left: 149px;" alt=""></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="icon.png" style="margin-left: 129px;"></a>
+            <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="{%static 'img/icon.png'%}" style="margin-left: 129px;"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="icon.png" style="margin-left: 140px;"></a>
+            <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;"></a>
         </li>
        
     </ul>
@@ -629,16 +630,16 @@
       <div class="row" >
           <!-- Sidebar -->
           <div class="col-md-3 mt-4  w-10 sidebar custom-margin"  >
-            <a href="#" onclick="showAtlassianSupport()"style="padding-top:60px;" class="link" >Atlassian Support <img src="Vector.png"style="float: right;
+            <a href="#" onclick="showAtlassianSupport()"style="padding-top:60px;" class="link" >Atlassian Support <img src="{%static 'img/Vector.png'%}"style="float: right;
 margin-left: -60px;
 color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-            <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="Vector.png"style="float: right;
+            <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="{%static 'img/Vector.png'%}"style="float: right;
               margin-left: -60px;
               color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-            <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="Vector.png"style="float: right;
+            <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
               margin-left: -60px;
               color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-            <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="Vector.png"style="float: right;
+            <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
               margin-left: -60px;
               color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
         </div>
@@ -653,7 +654,7 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
 <div class="migration-section">
 
   <section class="hero-section">
-    <img src="main1.png" alt="helpdesk" class="hero-image" />
+    <img src="{%static 'img/main1.png'%}" alt="helpdesk" class="hero-image" />
     <div class="hero-content">
       <h1 class="hero-title"style="font-family:'poppins',sans-serif;" >Migration Services Overview</h1>
       
@@ -666,7 +667,7 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
   <div class="services-grid">
     <div class="services-row">
       <div class="service-card1">
-        <img src="img1.png" alt="help Solutions Overview" class="service-image" />
+        <img src="{%static 'img/img1.png'%}" alt="help Solutions Overview" class="service-image" />
         <h2 class="service-title">Configuration & Workflow Migration</h2>
         <p class="service-description">
             At Thrive Tech, we offer comprehensive migration solutions designed to help your business transition smoothly to modern cloud platforms. Our expert team manages the entire process, ensuring minimal disruption to your operations. From Jira and Confluence Migration to Workflow, Repository, and CI/CD Migration, we handle complex data transfers with precision. </p>
@@ -692,7 +693,7 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
       </div>
 
       <div class="service-card4">
-        <img src="img2.png" alt="post- Migration Process" class="service-image" />
+        <img src="{%static 'img/img2.png'%}" alt="post- Migration Process" class="service-image" />
         <h2 class="service-title">Confluence Migration Assistant</h2>
         <p class="service-description">
             Simplify your move from Confluence Server or Data Center to Confluence Cloud. The Confluence Migration Assistant helps you effortlessly migrate spaces, pages, and user data, ensuring your knowledge base remains intact. Experience the power of Confluence Cloud with enhanced collaboration tools, security, and scalability, all while minimizing disruption to your team's workflows.</p>
@@ -718,10 +719,10 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
         <span style="margin-left: 10px;">Follow us</span>
         <div>
             <a href="https://www.linkedin.com/company/thrive-tech-cuddalore/" style="text-decoration: none; color: #8a8a8a;">
-                <img src="linkedin.png" alt="LinkedIn Icon">
+                <img src="{%static 'img/linkedin.png'%}" alt="LinkedIn Icon">
             </a>
             <a href="https://www.instagram.com/thrive_tech_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none; color: #8a8a8a;">
-                <img src="insta.png" alt="Instagram Icon">
+                <img src="{%static 'img/insta.png'%}" alt="Instagram Icon">
             </a>
         </div>
     </div>

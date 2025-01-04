@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   {% load static %}
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
     <title>Document</title>
-    
-    
+  
     <style>
         *{
             font-family: poppins,sans-serif;
@@ -891,7 +891,7 @@
     <div class="container-fluid" style="margin-left: 50px;margin-right:50px;">
         <div class="navbar-brand">
             <a href="#">
-                <img src="logo.png" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
+                <img src="{%static 'img/logo.png'%}" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
             </a>
             <div>
                 <div style="color: white; font-family: Kumbh Sans, serif;font-weight:900;font-size:20px;letter-spacing:4px;">THRIVE TECH</div>
@@ -900,20 +900,20 @@
         </div>
 
         <button class="navbar-toggler"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
-            <span><img src="burger.png" style="height:30px;" alt="Hamburger Icon"></span>
+            <span><img src="{%static 'img/burger.png'%}" style="height:30px;" alt="Hamburger Icon"></span>
         </button>
         <div class="na">
         <div class="navbar-nav justify-content-space-around">
             <ul class="navbar-nav">
                 <li class="nav-item" style="margin-right: 40px;">
-                    <a class="nav-link" href="#"onclick="showMain()" style="color: white;">What we Do<img src="icon.png" style="margin-left: 5px;" alt=""></a>
+                    <a class="nav-link" href="#"onclick="showMain()" style="color: white;">What we Do<img src="{%static 'img/icon.png'%}" style="margin-left: 5px;" alt=""></a>
                     
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color: white;" href="test.html">Who we are</a>
+                    <a class="nav-link" style="color: white;" href="{%url 'whoweare'%}">Who we are</a>
                 </li>
                 <li class="nav-item"style="margin-left: 40px;">
-                    <a class="nav-link"  style="color: white;"href="career.html">Careers</a>
+                    <a class="nav-link"  style="color: white;"href="{%url 'migration'%}">Careers</a>
                 </li>
             </ul>
         </div></div>
@@ -932,11 +932,11 @@
     <ul class="navbar-nav" style="font-size: 20px;"id="mainMenu">
         <li class="nav-item">
             <a class="nav-link" style="font-size: 25px;font-family:'poppins'sans-serif;" href="#" id="whatWeDoBtn">What we Do
-                <img src="icon.png" style="margin-left: 150px;" alt="">
+                <img src="{%static 'img/icon.png'%}" style="margin-left: 150px;" alt="">
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 25px;" href="test.html">Who we are</a>
+            <a class="nav-link" style="font-size: 25px;" href="{%url 'whoweare'%}">Who we are</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" style="font-size: 25px;" href="career.html">Careers</a>
@@ -953,16 +953,16 @@
         </a>
       </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="icon.png" style="margin-left: 140px;" alt=""></a>
+            <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;" alt=""></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="icon.png" style="margin-left: 149px;" alt=""></a>
+            <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="{%static 'img/icon.png'%}" style="margin-left: 149px;" alt=""></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="icon.png" style="margin-left: 129px;"></a>
+            <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="{%static 'img/icon.png'%}" style="margin-left: 129px;"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="icon.png" style="margin-left: 140px;"></a>
+            <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;"></a>
         </li>
        
     </ul>
@@ -1051,16 +1051,16 @@
       <div class="row" >
           <!-- Sidebar -->
           <div class="col-md-3 mt-4  w-10 sidebar custom-margin"  >
-              <a href="#" onclick="showAtlassianSupport()"style="padding-top:50px;" class="link" >Atlassian Support <img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupport()"style="padding-top:50px;" class="link" >Atlassian Support <img src="{%static 'img/Vector.png'%}"style="float: right;
   margin-left: -60px;
   color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-              <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="{%static 'img/Vector.png'%}"style="float: right;
                 margin-left: -60px;
                 color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-              <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
                 margin-left: -60px;
                 color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-              <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
                 margin-left: -60px;
                 color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
           </div>
@@ -1197,27 +1197,27 @@
        
         <div class="testimonials-section">
           <div class="testimonial-slider">
-            <img src="leftarrow.png" alt="Left arrow" class="slider-leftarrow-icon" id="prevBtn" loading="lazy" />
+            <img src="{%static 'img/leftarrow.png'%}" alt="Left arrow" class="slider-leftarrow-icon" id="prevBtn" loading="lazy" />
         
             <div class="testimonial-cards" id="testimonialCards">
               <div class="testimonial-card">
-                <img src="client3.png" alt="Client testimonial" class="testimonial-image" loading="lazy" />
+                <img src="{%static 'img/client3.png'%}" alt="Client testimonial" class="testimonial-image" loading="lazy" />
               </div>
               <div class="testimonial-card">
                 <img src="https://cdn.builder.io/api/v1/image/assets/24ccb9c0aaa340ad93860c1c7d861fdc/90dc3ed675755388fbc57da421dee30b25cda441bc14fef7573e69c1eb210844" alt="Client testimonial" class="testimonial-image" loading="lazy" />
               </div>
               <div class="testimonial-card">
-                <img src="client4.png" alt="Client testimonial" class="testimonial-image" loading="lazy" />
+                <img src="{%static 'img/client4.png'%}" alt="Client testimonial" class="testimonial-image" loading="lazy" />
               </div>
               <div class="testimonial-card">
-                <img src="client1.png" alt="Client testimonial" class="testimonial-image" loading="lazy" />
+                <img src="{%static 'img/client1.png'%}" alt="Client testimonial" class="testimonial-image" loading="lazy" />
               </div>
               <div class="testimonial-card">
-                <img src="client2.png" alt="Client testimonial" class="testimonial-image" loading="lazy" />
+                <img src="{%static 'img/client2.png'%}" alt="Client testimonial" class="testimonial-image" loading="lazy" />
               </div>
             </div>
         
-            <img src="rightarrow.png" alt="Right arrow" class="slider-rightarrow-icon" id="nextBtn" loading="lazy" />
+            <img src="{%static 'img/rightarrow.png'%}" alt="Right arrow" class="slider-rightarrow-icon" id="nextBtn" loading="lazy" />
           </div>
           <div class="d-flex justify-content-center mt-2">
             <button type="button" class="indicator-dot active" aria-label="Slide 1"></button>
@@ -1288,10 +1288,10 @@
               <span style="margin-left: 10px;">Follow us</span>
               <div>
                   <a href="https://www.linkedin.com/company/thrive-tech-cuddalore/" style="text-decoration: none; color: #8a8a8a;">
-                      <img src="linkedin.png" alt="LinkedIn Icon">
+                      <img src="{%static 'img/linkedin.png'%}" alt="LinkedIn Icon">
                   </a>
                   <a href="https://www.instagram.com/thrive_tech_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none; color: #8a8a8a;">
-                      <img src="insta.png" alt="Instagram Icon">
+                      <img src="{%static 'img/insta.png'%}" alt="Instagram Icon">
                   </a>
               </div>
           </div>
@@ -1582,9 +1582,9 @@
           const updateCounter = () => {
             current += Math.ceil(target / speed); // Increment the number
             if (current > target) {
-              element.textContent = `${target}+`; // Stop at target
+              element.textContent = ${target}+; // Stop at target
             } else {
-              element.textContent = `${current}+`;
+              element.textContent = ${current}+;
               requestAnimationFrame(updateCounter); // Continue animation
             }
           };

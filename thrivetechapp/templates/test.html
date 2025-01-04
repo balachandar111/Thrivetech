@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="{%static 'css/test.css'%}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -313,7 +314,7 @@
     <div class="container-fluid" style="margin-left: 50px;margin-right:50px;">
         <div class="navbar-brand">
             <a href="#">
-                <img src="logo.png" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
+                <img src="{%static 'img/logo.png'%}" alt="Thrive Tech Logo" style="width:38px; height:47px;margin-right:10px;">
             </a>
             <div>
               <div style="color: white; font-family: Kumbh Sans, serif;font-weight:900;font-size:20px;letter-spacing:6px;">THRIVE TECH</div>
@@ -322,7 +323,7 @@
         </div>
 
         <button class="navbar-toggler"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
-            <span><img src="burger.png" style="height:30px;" alt="Hamburger Icon"></span>
+            <span><img src="{%static 'img/burger.png'%}" style="height:30px;" alt="Hamburger Icon"></span>
         </button>
         <div class="na">
         <div class="navbar-nav justify-content-space-around">
@@ -354,7 +355,7 @@
     <ul class="navbar-nav" style="font-size: 20px;"id="mainMenu">
         <li class="nav-item">
             <a class="nav-link" style="font-size: 25px;font-family:'poppins'sans-serif;" href="#" id="whatWeDoBtn">What we Do
-                <img src="icon.png" style="margin-left: 150px;" alt="">
+                <img src="{%static 'img/icon.png'%}" style="margin-left: 150px;" alt="">
             </a>
         </li>
         <li class="nav-item">
@@ -374,16 +375,16 @@
         </a>
       </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="icon.png" style="margin-left: 140px;" alt=""></a>
+            <a class="nav-link" href="#" style="font-size: 20px;" id="atlassianSupportBtn">Atlassian Support <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;" alt=""></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="icon.png" style="margin-left: 149px;" alt=""></a>
+            <a class="nav-link" style="font-size: 20px;" href="#" id="uxUiBtn">UX/UI Designing <img src="{%static 'img/icon.png'%}" style="margin-left: 149px;" alt=""></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="icon.png" style="margin-left: 129px;"></a>
+            <a class="nav-link" style="font-size: 20px;" href="#" id="webBtn">Website developing<img src="{%static 'img/icon.png'%}" style="margin-left: 129px;"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="icon.png" style="margin-left: 140px;"></a>
+            <a class="nav-link" style="font-size: 20px;"  id="forgeDevBtn" href="#">Forge Developing <img src="{%static 'img/icon.png'%}" style="margin-left: 140px;"></a>
         </li>
        
     </ul>
@@ -471,16 +472,16 @@
         <div class="row" style="margin-top: -40px;">
             <!-- Sidebar -->
             <div class="col-md-3 mt-4  w-10 sidebar custom-margin"  >
-              <a href="#" onclick="showAtlassianSupport()"style="padding-top:80px;" class="link" >Atlassian Support <img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupport()"style="padding-top:80px;" class="link" >Atlassian Support <img src="{%static 'img/Vector.png'%}"style="float: right;
   margin-left: -60px;
   color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-              <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupportui()" class="link">UX/UI Designing<img src="{%static 'img/Vector.png'%}"style="float: right;
                 margin-left: -60px;
                 color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-              <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupportweb()" class="link">Website Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
                 margin-left: -60px;
                 color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
-              <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="Vector.png"style="float: right;
+              <a href="#" onclick="showAtlassianSupportforge()" class="link">Forge Developing<img src="{%static 'img/Vector.png'%}"style="float: right;
                 margin-left: -60px;
                 color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
           </div>
@@ -514,7 +515,7 @@
     </div>
   </div>
   <div class="first">
-    <img class="amico2" src="Coworking-amico 2.png" alt="Coworking illustration">
+    <img class="amico2" src="{%static 'img/Coworking-amico 2.png'%}" alt="Coworking illustration">
   </div>
 </div>
 
@@ -524,7 +525,7 @@
   </div>
 <!-- ------------------------- -->
  <div class="image-container">
-  <img src="base.png" alt="Placeholder Image" class="image" />
+  <img src="{%static 'img/base.png'%}" alt="Placeholder Image" class="image" />
 
     <div class="headline">Precision, Quality, Results</div>
     <div class="description">
@@ -535,7 +536,7 @@
   <div class="learn-more-container">
     <div class="learn-more-text">Learn more</div>
     <div class="arrow">
-      <img src="Vector (11).png" alt="Arrow Icon">
+      <img src="{%static 'img/Vector (11).png'%}" alt="Arrow Icon">
     </div>
   </div>
 </div>
@@ -551,7 +552,7 @@
   <div class="learn-more-container1">
     <div class="learn-more-text1">Learn more</div>
     <div class="arrow1">
-       <img src="Vector (11).png" alt="Arrow Icon">
+       <img src="{%static 'img/Vector (11).png'%}" alt="Arrow Icon">
     </div>
   </div>
   <div class="text-content lower">
@@ -564,7 +565,7 @@
   <div class="learn-more-container lower">
     <div class="learn-more-text2">Learn more</div>
     <div class="arrow2">
-       <img src="Vector (11).png" alt="Arrow Icon">
+       <img src="{%static 'img/Vector (11).png'%}" alt="Arrow Icon">
     </div>
   </div>
 </div>
@@ -578,38 +579,38 @@
 
         <!-- Events and Pointers -->
         <div class="calendar-icon-inline" id="icon-1">
-            <img src="icon1.png" alt="Calendar Icon">
+            <img src="{%static 'img/Frame 337.png'%}"style="z-index:20;" alt="Calendar Icon">
         </div>
         <div class="timeline-event left" id="event-1">
             <div class="section-title-large5">How It All Began</div>
-             <img src="t1.png" class="t1">
-              <img src="Vector (12).png" alt="Arrow" class="arrow-icon odd-icon">
+             <img src="{%static 'img/t1.png'%}" class="t1">
+              <img src="{%static 'img/Vector (12).png'%}" alt="Arrow" class="arrow-icon odd-icon">
               <div class="para1" style="padding: 20px;">
             <p> Founded in 2017, Thrive Infotech started as a small IT consulting firm with a clear vision: to deliver innovative technology solutions tailored to client needs. With a passion for technology and a commitment to excellence, our founders built the company from the ground up, offering customized IT services that quickly gained the trust of local businesses. Over the years, we’ve grown into a leading IT company, expanding our services, expertise, and client base across various industries.</p>
             </div>
         </div>
 
         <div class="calendar-icon-inline" id="icon-2">
-            <img src="icon1.png" alt="Calendar Icon">
+            <img src="{%static 'img/Frame 337.png'%}"style="z-index:20;" alt="Calendar Icon">
         </div>
         <div class="timeline-event right" id="event-2">
              <div class="section-title-large5">Our Evolution</div>
-             <img src="t2.png" class="t1">
+             <img src="{%static 'img/t2.png'%}" class="t1">
              <div class="para1" style="padding: 20px;">
             <p> Since our inception, Thrive Infotech has evolved from a small local IT consultancy to a trusted technology partner for businesses across multiple sectors. As the demand for cutting-edge solutions grew, we expanded our expertise to include software development, cloud services, and cybersecurity. With a focus on innovation and continuous improvement, our team has adopted the latest technologies and methodologies, ensuring that we stay ahead in an ever-changing tech landscape. Today, we are proud to serve a diverse range of clients, delivering solutions that drive growth and success.</p>
             </div>
-             <img src="Vector (13).png" alt="Arrow" class="arrow-icon even-icon">
+             <img src="{%static 'img/Vector (13).png'%}" alt="Arrow" class="arrow-icon even-icon">
         </div>
 
         <div class="calendar-icon-inline" id="icon-3">
-            <img src="icon1.png" alt="Calendar Icon">
+            <img src="{%static 'img/Frame 337.png'%}"style="z-index:20;" alt="Calendar Icon">
         </div>
         
         <div class="timeline-event left" id="event-3">
             <div class="section-title-large5">Success Highlights</div>
-            <img src="t3.png" class="t1">
+            <img src="{%static 'img/t3.png'%}" class="t1">
             
-              <img src="Vector (12).png" alt="Arrow" class="arrow-icon odd-icon">
+              <img src="{%static 'img/Vector (12).png'%}" alt="Arrow" class="arrow-icon odd-icon">
             <div class="para1" style="padding: 20px;">
               <p>  Accomplishments Along the Way
 Over the years, Thrive Infotech has earned several accolades and milestones that reflect our commitment to excellence. We’ve successfully completed over 150 projects across various industries, helping businesses leverage technology to achieve their goals. Our dedication has been recognized with industry awards, including "Best IT Service Provider 2022." We’ve also partnered with leading tech companies, expanding our capabilities and ensuring our clients receive top-tier solutions. These accomplishments are a testament to our passion for innovation and client satisfaction.</p>
@@ -617,16 +618,16 @@ Over the years, Thrive Infotech has earned several accolades and milestones that
         </div>
 
         <div class="calendar-icon-inline" id="icon-4">
-            <img src="icon1.png" alt="Calendar Icon">
+            <img src="{%static 'img/Frame 337.png'%}" style="z-index:20;margin-top:30px;margin-left:5px;" alt="Calendar Icon">
         </div>
         <div class="timeline-event right" id="event-4">
              <div class="section-title-large5">Vision for the Future</div>
-             <img src="t4.png" class="t1">
+             <img src="{%static 'img/t4.png'%}" class="t1">
               <div class="para1" style="padding: 20px;">
             <p>Where We’re Headed
 As we look toward the future, Thrive Infotech remains dedicated to pushing the boundaries of technology. Our vision is to continue evolving with the ever-changing IT landscape, embracing emerging technologies like AI, machine learning, and advanced cloud solutions. We aim to expand our global presence, delivering innovative, scalable solutions that empower businesses to thrive in the digital age. With a focus on sustainability, innovation, and customer success, we’re committed to shaping the future of technology for years to come.</p>
               </div>
-<img src="Vector (13).png" alt="Arrow" class="arrow-icon even-icon">
+<img src="{%static 'img/Vector (13).png'%}"style="margin-top:15px;" alt="Arrow" class="arrow-icon even-icon">
         </div>
         
     </div>
@@ -642,13 +643,13 @@ As we look toward the future, Thrive Infotech remains dedicated to pushing the b
     <!-- Carousel items -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="TTimg1.png" class="d-block w-100" alt="Image 1">
+        <img src="{%static 'img/TTimg1.png'%}" class="d-block w-100" alt="Image 1">
       </div>
       <div class="carousel-item">
-        <img src="TTimg1.png" class="d-block w-100" alt="Image 2">
+        <img src="{%static 'img/TTimg1.png'%}" class="d-block w-100" alt="Image 2">
       </div>
       <div class="carousel-item">
-        <img src="TTimg1.png" class="d-block w-100" alt="Image 3">
+        <img src="{%static 'img/TTimg1.png'%}" class="d-block w-100" alt="Image 3">
       </div>
     </div>
 
@@ -680,13 +681,13 @@ As we look toward the future, Thrive Infotech remains dedicated to pushing the b
 
   <div class="clients-list11" style="margin-top: 50px;">
     <div class="client-box11">
-      <img src="Frame 339 (1).png" class="client-img11" alt="Client Logo 1">
+      <img src="{%static 'img/Frame 339 (1).png'%}" class="client-img11" alt="Client Logo 1">
     </div>
     <div class="client-box11">
-      <img src="download 3 (1).png" class="client-img11" alt="Client Logo 2">
+      <img src="{%static 'img/download 3 (1).png'%}" class="client-img11" alt="Client Logo 2">
     </div>
     <div class="client-box11">
-      <img src="parseq_logo 1 (1).png" class="client-img11" alt="Client Logo 3">
+      <img src="{%static 'img/parseq_logo 1 (1).png'%}" class="client-img11" alt="Client Logo 3">
     </div>
   </div>
 </div>
@@ -702,10 +703,10 @@ As we look toward the future, Thrive Infotech remains dedicated to pushing the b
       <span style="margin-left: 5px;font-size:15px;">Follow us</span>
       <div>
           <a href="https://www.linkedin.com/company/thrive-tech-cuddalore/" style="text-decoration: none; color: #8a8a8a;">
-              <img src="linkedin.png" alt="LinkedIn Icon">
+              <img src="{%static 'img/linkedin.png'%}" alt="LinkedIn Icon">
           </a>
           <a href="https://www.instagram.com/thrive_tech_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none; color: #8a8a8a;">
-              <img src="insta.png" alt="Instagram Icon">
+              <img src="{%static 'img/insta.png'%}" alt="Instagram Icon">
           </a>
       </div>
   </div>
@@ -720,55 +721,57 @@ As we look toward the future, Thrive Infotech remains dedicated to pushing the b
 </div>
 
 <!-- ------------------------------------------------------------------------ -->
-        <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const timelineContainer = document.getElementById("timeline-container");
-            const timelineIcons = document.querySelectorAll(".calendar-icon-inline");
-            const timelineEvents = document.querySelectorAll(".timeline-event");
-            const timelineLine = document.getElementById("timeline-line");
-            const lastPointer = document.getElementById("icon-4");
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const timelineContainer = document.getElementById("timeline-container");
+    const timelineIcons = document.querySelectorAll(".calendar-icon-inline");
+    const timelineEvents = document.querySelectorAll(".timeline-event");
+    const timelineLine = document.getElementById("timeline-line");
+    const lastPointer = document.getElementById("icon-4");
 
-            // Calculate equal spacing
-            const totalHeight = timelineContainer.offsetHeight;
-            const step = totalHeight / timelineIcons.length;
+    // Calculate equal spacing
+    const totalHeight = timelineContainer.offsetHeight;
+    const step = totalHeight / timelineIcons.length;
 
-            timelineIcons.forEach((icon, index) => {
-                const topPosition = step * index; // Distribute icons equally
-                icon.style.top = `${topPosition}px`;
+    timelineIcons.forEach((icon, index) => {
+        const topPosition = step * index; // Distribute icons equally
+        icon.style.top = `${topPosition}px`;
 
-                if (index < timelineEvents.length) {
-                    timelineEvents[index].style.top = `${topPosition - 20}px`; // Adjust to align with icon
-                }
-            });
+        if (index < timelineEvents.length) {
+            timelineEvents[index].style.top = `${topPosition - 20}px`; // Adjust to align with icon
+        }
+    });
 
-            // Adjust timeline line height based on the last pointer
-            const lastPointerTop = lastPointer.offsetTop;
-            timelineLine.style.height = `${lastPointerTop}px`;
+    // Adjust timeline line height based on the last pointer
+    const lastPointerTop = lastPointer.offsetTop;
+    timelineLine.style.height = `${lastPointerTop}px`;
 
-            // Gradual color fill on scroll
-            window.addEventListener("scroll", () => {
-                const containerRect = timelineContainer.getBoundingClientRect();
-                const scrolled = Math.max(0, window.scrollY - containerRect.top);
-                const scrollPercentage = Math.min(1, scrolled / (lastPointerTop - window.innerHeight));
-                const fillPercentage = scrollPercentage * 100;
+    // Gradual color fill on scroll
+    window.addEventListener("scroll", () => {
+        const containerRect = timelineContainer.getBoundingClientRect();
+        const scrolled = Math.max(0, -containerRect.top); // Pixels scrolled within the container
+        const scrollPercentage = Math.min(1, scrolled / (lastPointerTop - window.innerHeight));
+        const fillPercentage = scrollPercentage * 100;
 
-                // Update timeline line fill
-                timelineLine.style.background = `linear-gradient(to bottom, #6DC7C1 ${fillPercentage}10%, #ccc ${fillPercentage}15%)`;
+        // Update timeline line fill
+        timelineLine.style.background = `linear-gradient(to bottom, #6DC7C1 ${fillPercentage}%, #ccc ${fillPercentage}%)`;
 
-                // Update pointer fill
-                timelineIcons.forEach((icon, index) => {
-                    const iconOffsetTop = icon.offsetTop - window.scrollY;
-                    const iconPercentage = (iconOffsetTop / totalHeight) * 100;
-
-                    if (fillPercentage >= iconPercentage) {
-                        icon.style.filter = "brightness(0.7)"; // Add visual effect on scroll
-                    } else {
-                        icon.style.filter = "none";
-                    }
-                });
-            });
+        // Update timeline icons based on scroll position
+        timelineIcons.forEach((icon) => {
+            const iconTop = icon.getBoundingClientRect().top - containerRect.top;
+            if (scrolled >= iconTop) {
+                icon.style.filter = "brightness(1.2)"; // Highlight icon
+            } else {
+                icon.style.filter = "brightness(0.7)"; // Reset icon appearance
+            }
         });
+    });
+});
+
     </script>
+
+  </script>
+
     <script>
       const carousel = document.getElementById('imageCarousel');
       const indicators = document.querySelectorAll('.indicator-dot');
