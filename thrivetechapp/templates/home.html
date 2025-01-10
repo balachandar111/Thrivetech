@@ -9,11 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+       <title>Document</title>
   
     <style>
         *{
-            font-family: poppins,sans-serif;
+            font-family: 'poppins',sans-serif;
             
         }
         .hero-section {
@@ -577,6 +584,7 @@
             font-size: 14px;
             margin-bottom: 5px;
             display: block;
+            text-align:start;
         }
 
         input, textarea {
@@ -882,6 +890,76 @@
   }
 }
 
+.testimonial-slider {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 50px;
+}
+
+.testimonial-cards {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.testimonial-card {
+  width: 33.33%; /* Show 3 images at once */
+  padding: 0 10px;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slider-leftarrow-icon, .slider-rightarrow-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-leftarrow-icon {
+  left: 10px;
+}
+
+.slider-rightarrow-icon {
+  right: 10px;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.indicator-dot.active {
+  width: 35px; /* Increased width when active */
+  height: 12px;
+  border-radius: 20px; /* Keep height consistent */
+  background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1))); /* Active color for the dot */
+ 
+}
+
+.indicator-dot:hover {
+  background-color: rgba(109, 199, 193, 1); /* Hover effect */
+}
+@media (min-width:320px)and(max-width:490px){
+  .indicator-dot{
+    width: 10px;
+    height: 10px;
+  }
+
+}
        
         </style>
 </head>
@@ -1071,7 +1149,7 @@
           </div>
       </div>
   </div>
-   </div>
+</div>
 
     <div class="hero-section">
         <div class="hero-banner" style="margin-top: 10px;">
@@ -1198,7 +1276,7 @@
         <div class="testimonials-section">
           <div class="testimonial-slider">
             <img src="{%static 'img/leftarrow.png'%}" alt="Left arrow" class="slider-leftarrow-icon" id="prevBtn" loading="lazy" />
-        
+            
             <div class="testimonial-cards" id="testimonialCards">
               <div class="testimonial-card">
                 <img src="{%static 'img/client3.png'%}" alt="Client testimonial" class="testimonial-image" loading="lazy" />
@@ -1216,64 +1294,84 @@
                 <img src="{%static 'img/client2.png'%}" alt="Client testimonial" class="testimonial-image" loading="lazy" />
               </div>
             </div>
-        
-            <img src="{%static 'img/rightarrow.png'%}" alt="Right arrow" class="slider-rightarrow-icon" id="nextBtn" loading="lazy" />
+            
+            <img src="{%static 'img/rightarrow.png'%}" alt="Right arrow" class="slider-rightarrow-icon" id="nextBtn" data-target="nextBtn" loading="lazy" />
           </div>
+        
+          <!-- Indicator Dots -->
           <div class="d-flex justify-content-center mt-2">
-            <button type="button" class="indicator-dot active" aria-label="Slide 1"></button>
-            <button type="button" class="indicator-dot" aria-label="Slide 2"></button>
-            <button type="button" class="indicator-dot" aria-label="Slide 3"></button>
+            <button type="button" class="indicator-dot active" aria-label="Slide 1" data-slide="0" data-target="nextBtn"></button>
+            <button type="button" class="indicator-dot" aria-label="Slide 2" data-slide="1" data-target="nextBtn"></button>
+            <button type="button" class="indicator-dot" aria-label="Slide 3" data-slide="2" data-target="nextBtn"></button>
+          
           </div>
         
+          <!-- Testimonial Quote -->
           <blockquote class="testimonial-quote">
             The support from Thrive Tech has been outstanding. They're responsive, knowledgeable, and have helped us streamline our processes, saving us time and resources.
           </blockquote>
         </div>
-
-
-        <div class="container" id="enquire" style="margin-bottom: -60%;background-color: #111; margin-top:100px">
-            <h1 class="t1">Get In Touch <span style="color:rgba(109, 199, 193, 1) ;">With Us</span></h1>
-            <p class="p1">Elevate customer experience by leveraging the <br>power of <span style="color: #6dc7c1"><a style="color: #6dc7c1" href="#">Digital transformation</a></span></p>
-    
-            <div class="li" style="margin-top:20px;">
-                <label for="name">Name</label>
-                <input type="text"style="width:50%;" id="name" name="name" required>
-            </div>
-    
-            <div class="li">
-                <label for="company-name">Company Name</label>
-                <input type="text"style="width:50%;" id="company-name" name="company-name" required>
-            </div>
-    
-            <div class="li">
-                <label for="email">Company Email</label>
-                <input type="email"style="width:50%;" id="email" name="email" required>
-            </div>
-    
-            <div class="li">
-                <label for="mobile">Company Mobile</label>
-                <input type="tel" style="width:50%;"id="mobile" name="mobile" required>
-            </div>
-    
-            <div class="li">
-                <label for="team-size">Company Size (Team size)</label>
-                <input type="number"style="width:50%;" id="team-size" name="team-size" required>
-            </div>
-    
-            <div class="li">
-                <label for="products">Products</label>
-                <input type="text" style="width:50%;"id="products" name="products" required>
-            </div>
-    
-            <div class="li">
-                <label for="requirements">Please Describe your requirements</label>
-                <textarea id="requirements" name="requirements"></textarea>
-            </div>
-    
-            <button type="submit" class="submit-btn">Submit</button>
-    
         
-        </div>
+        <script>
+          // Function to show alert messages
+          function showAlert(message, type) {
+              alert(`${type.toUpperCase()}: ${message}`);
+          }
+      </script>
+      {% if messages %}
+          <script>
+              {% for message in messages %}
+                  showAlert("{{ message }}", "{{ message.tags }}");
+              {% endfor %}
+          </script>
+      {% endif %}
+
+        <form method="POST"  style="width:100%;" action="{% url 'home' %}" id="contact-form">
+          {% csrf_token %}
+          
+          <div  class="container"  id="enquire" style="margin-bottom: -60%; background-color: #111; margin-top: 100px">
+              <h1 class="t1">Get In Touch <span style="color:rgba(109, 199, 193, 1);">With Us</span></h1>
+              <p class="p1">Elevate customer experience by leveraging the <br>power of <span style="color: #6dc7c1"><a style="color: #6dc7c1" href="#">Digital transformation</a></span></p>
+      
+              <div class="li" style="margin-top: 20px;">
+                  <label for="name">Name</label>
+                  <input type="text" style="width: 50%;" id="name" name="name" required>
+              </div>
+      
+              <div class="li">
+                  <label for="company-name">Company Name</label>
+                  <input type="text" style="width: 50%;" id="company-name" name="company-name" required>
+              </div>
+      
+              <div class="li">
+                  <label for="email">Company Email</label>
+                  <input type="email" style="width: 50%;" id="email" name="email" required>
+              </div>
+      
+              <div class="li">
+                  <label for="mobile">Company Mobile</label>
+                  <input type="tel" style="width: 50%;" id="mobile" name="mobile" required>
+              </div>
+      
+              <div class="li">
+                  <label for="team-size">Company Size (Team size)</label>
+                  <input type="number" style="width: 50%;" id="team-size" name="team-size" required>
+              </div>
+      
+              <div class="li">
+                  <label for="products">Products</label>
+                  <input type="text" style="width: 50%;" id="products" name="products" required>
+              </div>
+      
+              <div class="li">
+                  <label for="requirements">Please Describe your requirements</label>
+                  <textarea id="requirements" name="requirements"></textarea>
+              </div>
+      
+              <button type="submit" class="submit-btn">Submit</button>
+          </div>
+      </form>
+      
 
    
       
@@ -1605,53 +1703,66 @@
     
         observer.observe(statsContainer);
         
+         
         const cardsContainer = document.getElementById('testimonialCards');
-        const cards = Array.from(cardsContainer.children);
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const indicatorDots = document.querySelectorAll('.indicator-dot');
-      
-        let currentIndex = 0;
-        const visibleCards = 3;
-      
-        function updateSlider() {
-          // Update which cards are visible
-          cards.forEach((card, index) => {
-            if (index >= currentIndex && index < currentIndex + visibleCards) {
-              card.classList.add('active');
-            } else {
-              card.classList.remove('active');
-            }
-          });
-      
-          // Update active indicator
-          indicatorDots.forEach((dot, index) => {
-            if (index === currentIndex) {
-              dot.classList.add('active');
-            } else {
-              dot.classList.remove('active');
-            }
-          });
-        }
-      
-        prevBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-          if (currentIndex + visibleCards > cards.length) {
-            currentIndex = cards.length - visibleCards;
-          }
-          updateSlider();
-        });
-      
-        nextBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % cards.length;
-          if (currentIndex + visibleCards > cards.length) {
-            currentIndex = 0;
-          }
-          updateSlider();
-        });
-      
-        // Initialize the slider with the first set of active cards
-        updateSlider();
+const cards = Array.from(cardsContainer.children);
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const indicatorDots = document.querySelectorAll('.indicator-dot');
+
+let currentIndex = 0; // Initially, the first card is displayed
+const visibleCards = 3; // Display three cards at a time
+
+function updateSlider() {
+  // Update which cards are visible
+  cards.forEach((card, index) => {
+    if (index >= currentIndex && index < currentIndex + visibleCards) {
+      card.classList.add('active');
+    } else {
+      card.classList.remove('active');
+    }
+  });
+
+  // Update active indicator
+  indicatorDots.forEach((dot, index) => {
+    if (index === currentIndex) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+}
+
+function handleIndicatorClick(e) {
+  // Set currentIndex to the slide corresponding to the clicked indicator
+  const slideIndex = parseInt(e.target.getAttribute('data-slide'), 10);
+  currentIndex = slideIndex;
+  updateSlider();
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  if (currentIndex + visibleCards > cards.length) {
+    currentIndex = cards.length - visibleCards;
+  }
+  updateSlider();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % cards.length;
+  if (currentIndex + visibleCards > cards.length) {
+    currentIndex = 0;
+  }
+  updateSlider();
+});
+
+// Add event listener for each indicator dot
+indicatorDots.forEach(dot => {
+  dot.addEventListener('click', handleIndicatorClick);
+});
+
+// Initialize the slider with the first set of active cards
+updateSlider();
       </script>
 </body>
 </html>

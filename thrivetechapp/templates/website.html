@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
 
   <title>Document</title>
   <style>
@@ -198,7 +202,7 @@
   }
   .service-card3{
     width: 350px;
-    height:357px;
+    height:397px;
     margin-left: 20px;
   }
   .service-card4{
@@ -335,7 +339,7 @@
   }
   .hero-title{
     width: 700px;
-    margin-left:  150px;
+    margin-left:  120px;
     font-size: 25px;
     margin-top: 50px;
   }
@@ -473,19 +477,19 @@
             <div class="navbar-nav justify-content-space-around">
                 <ul class="navbar-nav">
                     <li class="nav-item" style="margin-right: 40px;">
-                        <a class="nav-link" href="#"onclick="showMain()"  style="color: white;">What we Do<img src="icon.png" style="margin-left: 5px;" alt=""></a>
+                        <a class="nav-link" href="#"onclick="showMain()"  style="color: white;">What we Do<img src="{%static 'img/icon.png'%}"style="margin-left: 5px;" alt=""></a>
                         
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: white;" href="test.html">Who we are</a>
+                        <a class="nav-link" style="color: white;" href="{%url 'whoweare'%}">Who we are</a>
                     </li>
                     <li class="nav-item"style="margin-left: 40px;">
-                        <a class="nav-link"  style="color: white;"href="career.html">Careers</a>
+                        <a class="nav-link"  style="color: white;"href="{%url 'career'%}">Careers</a>
                     </li>
                 </ul>
             </div></div>
             <div class="enquire-btn ms-3">
-              <a href="home.html#enquire" style="color: white;text-decoration:none"><button style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"  class="enquire-btn">Enquire</button></a>
+              <a href="{%url 'home'%}#enquire" style="color: white;text-decoration:none"><button style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"  class="enquire-btn">Enquire</button></a>
             </div>
         </div>
     </nav>
@@ -503,12 +507,12 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="font-size: 25px;" href="test.html">Who we are</a>
+                <a class="nav-link" style="font-size: 25px;" href="{%url 'whoweare'%}">Who we are</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="font-size: 25px;" href="career.html">Careers</a>
+                <a class="nav-link" style="font-size: 25px;" href="{%url 'career'%}">Careers</a>
             </li>
-            <a href="home.html#enquire" style="color: white;text-decoration:none"><button style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"  class="enquire-btn">Enquire</button></a>
+            <a href="{%url 'home'%}#enquire" style="color: white;text-decoration:none"><button style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"  class="enquire-btn">Enquire</button></a>
           </ul>
         
         <!-- What We Do Menu -->
@@ -541,13 +545,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="migration1.html" id="migrationBtn">Migration </a>
+            <a class="nav-link"  href="{%url 'migration'%}" id="migrationBtn">Migration </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="helpdesk.html" id="helpdeskServicesBtn">Helpdesk Services</a>
+            <a class="nav-link"  href="{%url 'helpdesk'%}" id="helpdeskServicesBtn">Helpdesk Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="customersupport.html" id="customerSupportBtn">Customer Support</a>
+            <a class="nav-link"  href="{%url 'customersupport'%}" id="customerSupportBtn">Customer Support</a>
           </li>
         </ul>
         
@@ -561,13 +565,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="uiux.html"id="uxServicesBtn">User Experience (UX) Services</a>
+        <a class="nav-link" href="{%url 'uiux'%}"id="uxServicesBtn">User Experience (UX) Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="uiux.html"id="uiDesignBtn">User Interface (UI) Design</a>
+        <a class="nav-link" href="{%url 'uiux'%}"id="uiDesignBtn">User Interface (UI) Design</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="uiux.html" id="designEnhancementBtn">Design Enhancement & Support</a>
+        <a class="nav-link" href="{%url 'uiux'%}" id="designEnhancementBtn">Design Enhancement & Support</a>
       </li>
     </ul>
     <!-- User Experience (UX) Services Sub-Menu -->
@@ -580,13 +584,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="website.html" id="frontendBtn">Frontend & User Interaction</a>
+        <a class="nav-link" href="{%url 'website'%}" id="frontendBtn">Frontend & User Interaction</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="website.html" id="backendBtn">Backend & Data Management</a>
+        <a class="nav-link" href="{%url 'website'%}" id="backendBtn">Backend & Data Management</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="website.html" id="maintenanceBtn">Maintenance & Custom Solutions</a>
+        <a class="nav-link" href="{%url 'website'%}" id="maintenanceBtn">Maintenance & Custom Solutions</a>
       </li>
     </ul>
     
@@ -598,13 +602,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="forge.html" id="customAppDevBtn">Custom App Development & Deployment</a>
+        <a class="nav-link" href="{%url 'forge'%}" id="customAppDevBtn">Custom App Development & Deployment</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="forge.html" id="integrationAtlassianBtn">Integration with Atlassian Ecosystem</a>
+        <a class="nav-link" href="{%url 'forge'%}" id="integrationAtlassianBtn">Integration with Atlassian Ecosystem</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="forge.html" id="secureForgeHostingBtn">Secure and Scalable Forge<br> Hosting</a>
+        <a class="nav-link" href="{%url 'forge'%}" id="secureForgeHostingBtn">Secure and Scalable Forge<br> Hosting</a>
       </li>
     </ul>
     
@@ -754,7 +758,6 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
       });
   });
 
-  
   function showMain() {
     const mainContent = document.getElementById('mainContent');
     
@@ -775,40 +778,44 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
     }
   });
 
+
+
+
+
   function showAtlassianSupport() {
       const content = `
             <div style="margin-left:10px;">
-              <h5><a href="migration1.html" style="color: #6DC7C1;">Migration</a></h5>
+              <h5><a href="{%url 'migration'%}" style="color: #6DC7C1;">Migration</a></h5>
               <ul>
-                  <li><a href="migration1.html">Jira Migration Assistant</a></li>
-                  <li><a href="migration1.html">Confluence Migration Assistant</a></li>
-                  <li><a href="migration1.html">Configuration & Workflow Migration</a></li>
-                  <li><a href="migration1.html">Repository & CI/CD Migration</a></li>
-                  <li><a href="migration1.html">Custom Data & App Migration</a></li>
-                  <li><a href="migration1.html">Incident & Issue Management</a></li>
+                  <li><a href="{%url 'migration'%}">Jira Migration Assistant</a></li>
+                  <li><a href="{%url 'migration'%}">Confluence Migration Assistant</a></li>
+                  <li><a href="{%url 'migration'%}">Configuration & Workflow Migration</a></li>
+                  <li><a href="{%url 'migration'%}">Repository & CI/CD Migration</a></li>
+                  <li><a href="{%url 'migration'%}">Custom Data & App Migration</a></li>
+                  <li><a href="{%url 'migration'%}">Incident & Issue Management</a></li>
               </ul>
           </div>
          <div style="border-left: 3px solid white;margin-left:-10px; width:10%;"></div>
           <div style="margin-left:-200px;">
-              <h5><a href="helpdesk.html" style="color: #6DC7C1;">Helpdesk Services</a></h5>
+              <h5><a href="{%url 'helpdesk'%}" style="color: #6DC7C1;">Helpdesk Services</a></h5>
               <ul>
-                  <li><a href="helpdesk.html">Incident Tracking & Resolution</a></li>
-                  <li><a href="helpdesk.html">On-Call Management</a></li>
-                  <li><a href="helpdesk.html">Post – Incident Review</a></li>
-                  <li><a href="helpdesk.html">Root Cause Analysis</a></li>
-                  <li><a href="helpdesk.html">Service Level Agreements (SLAs)</a></li>
-                  <li><a href="helpdesk.html">Change Request Management</a></li>
+                  <li><a href="{%url 'helpdesk'%}">Incident Tracking & Resolution</a></li>
+                  <li><a href="{%url 'helpdesk'%}">On-Call Management</a></li>
+                  <li><a href="{%url 'helpdesk'%}">Post – Incident Review</a></li>
+                  <li><a href="{%url 'helpdesk'%}">Root Cause Analysis</a></li>
+                  <li><a href="{%url 'helpdesk'%}">Service Level Agreements (SLAs)</a></li>
+                  <li><a href="{%url 'helpdesk'%}">Change Request Management</a></li>
               </ul>
           </div>
           <div style="border-left: 3px solid white;margin-left:-10px; width: 10%;"></div>
           <div style="margin-left:-200px;">
-              <h5><a href="customersupport.html" style="color: #6DC7C1;">Customer Support</a></h5>
+              <h5><a href="{%url 'customersupport'%}" style="color: #6DC7C1;">Customer Support</a></h5>
               <ul>
-                  <li><a href="customersupport.html">Pre - Sales Support</a></li>
-                  <li><a href="customersupport.html">Order & Purchase Support</a></li>
-                  <li><a href="customersupport.html">Post - Sales Support</a></li>
-                  <li><a href="customersupport.html">Customer Relationship Management</a></li>
-                  <li><a href="customersupport.html">Multichannel Support</a></li>
+                  <li><a href="{%url 'customersupport'%}">Pre - Sales Support</a></li>
+                  <li><a href="{%url 'customersupport'%}">Order & Purchase Support</a></li>
+                  <li><a href="{%url 'customersupport'%}">Post - Sales Support</a></li>
+                  <li><a href="{%url 'customersupport'%}">Customer Relationship Management</a></li>
+                  <li><a href="{%url 'customersupport'%}">Multichannel Support</a></li>
               </ul>
           </div>
       `;
@@ -818,30 +825,30 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
   function showAtlassianSupportweb() {
       const content = `
           <div style="margin-left:10px;margin-right:-80px">
-              <h5><a href="website.html" style="color: #6DC7C1;">Frontend & User Interaction</a></h5>
+              <h5><a href="{%url 'website'%}" style="color: #6DC7C1;">Frontend & User Interaction</a></h5>
               <ul>
-                  <li><a href="website.html">Responsive Frontend Development</a></li>
-                  <li><a href="website.html">Interactive UI Development</a></li>
-                  <li><a href="website.html">SEO Optimization</a></li>
+                  <li><a href="{%url 'website'%}">Responsive Frontend Development</a></li>
+                  <li><a href="{%url 'website'%}">Interactive UI Development</a></li>
+                  <li><a href="{%url 'website'%}">SEO Optimization</a></li>
               </ul>
           </div>
          <div style="border-left: 3px solid white;margin-left:40px;margin-right:20px; width:10%;"></div>
           <div style="margin-left:-200px;">
-              <h5><a href="website.html" style="color: #6DC7C1;">Backend & Data Management</a></h5>
+              <h5><a href="{%url 'website'%}" style="color: #6DC7C1;">Backend & Data Management</a></h5>
               <ul>
-                  <li><a href="website.html">Server-Side Development</a></li>
-                  <li><a href="website.html">Database Integration</a></li>
-                  <li><a href="website.html">API Development</a></li>
+                  <li><a href="{%url 'website'%}">Server-Side Development</a></li>
+                  <li><a href="{%url 'website'%}">Database Integration</a></li>
+                  <li><a href="{%url 'website'%}">API Development</a></li>
                  
               </ul>
           </div>
           <div style="border-left: 3px solid white;margin-right:115px;margin-left:-20px;width: 1%;"></div>
           <div style="margin-left:-200px;">
-              <h5><a href="website.html" style="color: #6DC7C1;">Maintenance & Custom Solutions</a></h5>
+              <h5><a href="{%url 'website'%}" style="color: #6DC7C1;">Maintenance & Custom Solutions</a></h5>
               <ul>
-                  <li><a href="website.html">Website Maintenance & Updates</a></li>
-                  <li><a href="website.html">CMS Integration & Customization</a></li>
-                  <li><a href="website.html">Custom Web Application Development</a></li>
+                  <li><a href="{%url 'website'%}">Website Maintenance & Updates</a></li>
+                  <li><a href="{%url 'website'%}">CMS Integration & Customization</a></li>
+                  <li><a href="{%url 'website'%}">Custom Web Application Development</a></li>
                   
               </ul>
           </div>
@@ -851,31 +858,31 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
   function showAtlassianSupportui() {
     const content = `
           <div style="margin-left:10px;">
-            <h5><a href="uiux.html" style="color: #6DC7C1;">User Experience (UX) Services</a></h5>
+            <h5><a href="{%url 'uiux'%}" style="color: #6DC7C1;">User Experience (UX) Services</a></h5>
             <ul>
-                <li><a href="uiux.html">User Research & Persona Creation</a></li>
-                <li><a href="uiux.html">Usability Testing</a></li>
-                <li><a href="uiux.html">Accessibility Design</a></li>
+                <li><a href="{%url 'uiux'%}">User Research & Persona Creation</a></li>
+                <li><a href="{%url 'uiux'%}">Usability Testing</a></li>
+                <li><a href="{%url 'uiux'%}">Accessibility Design</a></li>
               
             </ul>
         </div>
        <div style="border-left: 3px solid white;margin-left:-60px; width:10%;"></div>
         <div style="margin-left:-200px;">
-            <h5><a href="uiux.html" style="color: #6DC7C1;">User Interface (UI) Design</a></h5>
+            <h5><a href="{%url 'uiux'%}" style="color: #6DC7C1;">User Interface (UI) Design</a></h5>
             <ul>
-                <li><a href="uiux.html">Wireframing & Prototyping</a></li>
-                <li><a href="uiux.html">Visual Design & Branding</a></li>
-                <li><a href="uiux.html">Interaction Design</a></li>
+                <li><a href="{%url 'uiux'%}">Wireframing & Prototyping</a></li>
+                <li><a href="{%url 'uiux'%}">Visual Design & Branding</a></li>
+                <li><a href="{%url 'uiux'%}">Interaction Design</a></li>
               
             </ul>
         </div>
         <div style="border-left: 3px solid white;margin-left:-10px; width: 10%;"></div>
         <div style="margin-left:-200px;">
-            <h5><a href="uiux.html" style="color: #6DC7C1;">Design Enhancement & Support</a></h5>
+            <h5><a href="{%url 'uiux'%}" style="color: #6DC7C1;">Design Enhancement & Support</a></h5>
             <ul>
-                <li><a href="uiux.html">Design System Creation</a></li>
-                <li><a href="uiux.html">UI Optimization for Performance</a></li>
-                <li><a href="uiux.html">Ongoing Design Consultation</a></li>
+                <li><a href="{%url 'uiux'%}">Design System Creation</a></li>
+                <li><a href="{%url 'uiux'%}">UI Optimization for Performance</a></li>
+                <li><a href="{%url 'uiux'%}">Ongoing Design Consultation</a></li>
       
         </div>
     `;
@@ -884,34 +891,34 @@ color: #6DC7C1;height:13px;margin-top:5px;" alt=""></a>
 function showAtlassianSupportforge() {
   const content = `
         <div style="margin-left:10px;">
-          <h5><a href="forge.html" style="color: #6DC7C1;">Custom App Development & Deployment</a></h5>
+          <h5><a href="{%url 'forge'%}" style="color: #6DC7C1;">Custom App Development & Deployment</a></h5>
           <ul>
-              <li><a href="forge.html">Tailored Apps for Specific Use Casest</a></li>
-              <li><a href="forge.html">Simplified App Deployment Process</a></li>
-              <li><a href="forge.html">Enhancing User Workflows with Forge Apps</a></li>
-              <li><a href="forge.html">Performance-Optimized and Scalable Solutions</a></li>
+              <li><a href="{%url 'forge'%}">Tailored Apps for Specific Use Casest</a></li>
+              <li><a href="{%url 'forge'%}">Simplified App Deployment Process</a></li>
+              <li><a href="{%url 'forge'%}">Enhancing User Workflows with Forge Apps</a></li>
+              <li><a href="{%url 'forge'%}">Performance-Optimized and Scalable Solutions</a></li>
         
           </ul>
       </div>
      <div style="border-left: 3px solid white;margin-left:80px;margin-right:-20px;width:10%;"></div>
       <div style="margin-left:-40px;">
-          <h5><a href="forge.html" style="color: #6DC7C1;">Integration with Atlassian Ecosystem</a></h5>
+          <h5><a href="{%url 'forge'%}" style="color: #6DC7C1;">Integration with Atlassian Ecosystem</a></h5>
           <ul>
-              <li><a href="forge.html">Seamless Integration with Jira and Confluence</a></li>
-              <li><a href="forge.html">Enabling Cross-Platform Functionality</a></li>
-              <li><a href="forge.html">Boosting Team Collaboration</a></li>
-              <li><a href="forge.html">APIs and Webhooks for Extended Features</a></li>
+              <li><a href="{%url 'forge'%}">Seamless Integration with Jira and Confluence</a></li>
+              <li><a href="{%url 'forge'%}">Enabling Cross-Platform Functionality</a></li>
+              <li><a href="{%url 'forge'%}">Boosting Team Collaboration</a></li>
+              <li><a href="{%url 'forge'%}">APIs and Webhooks for Extended Features</a></li>
              
           </ul>
       </div>
       <div style="border-left: 3px solid white;margin-left:60px;margin-right:20px; width: 10%;"></div>
       <div style="margin-left:-80px;" >
-          <h5><a href="forge.html" style="color: #6DC7C1;">Secure and Scalable Forge Hosting</a></h5>
+          <h5><a href="{%url 'forge'%}" style="color: #6DC7C1;">Secure and Scalable Forge Hosting</a></h5>
           <ul>
-              <li><a href="forge.html">Built-In Security for Your Apps</a></li>
-              <li><a href="forge.html">Scalable Hosting on Forge Infrastructure</a></li>
-              <li><a href="forge.html">Scalable Hosting on Forge Infrastructure</a></li>
-              <li><a href="forge.html">Real-Time Monitoring and Issue Resolution</a></li>
+              <li><a href="{%url 'forge'%}">Built-In Security for Your Apps</a></li>
+              <li><a href="{%url 'forge'%}">Scalable Hosting on Forge Infrastructure</a></li>
+              <li><a href="{%url 'forge'%}">Scalable Hosting on Forge Infrastructure</a></li>
+              <li><a href="{%url 'forge'%}">Real-Time Monitoring and Issue Resolution</a></li>
   
           </ul>
       </div>

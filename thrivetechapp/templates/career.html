@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      
     <style>
       *{
         margin: 0px;
@@ -206,11 +210,14 @@
             background-color: #18a078;
         }
         .search-bar{
-            margin-left:10px;
+            margin-left:70px;
         }
         @media(max-width:490px){
             .body{
                 background-image:url("Group 2.png");
+            }
+            .search-bar{
+                margin-left:10px;
             }
            
 
@@ -301,10 +308,13 @@
             /* Hide dividers in mobile view */
         }
       }
+      .con{
+        background-image: url("{% static 'img/Group2.png' %}");
+      }
     </style>
 </head>
 <body >
-<div class="con" style="background-image:url('Group2.png');background-size:cover;">
+<div class="con" style="background-size:cover;">
   
     <nav class="navbar navbar-expand-lg nav "style="background-color:#00000033; backdrop-filter: blur(4px);position:fixed;z-index:10;width:100%">
         <div class="container-fluid" style="margin-left: 50px;margin-right:50px;">
@@ -498,11 +508,16 @@
 
     <div class="row mb-4 search-bar">
         <div class="col-md-3 mb-3">
-            <select class="form-select" style="color:#6DC7C1";>
-                <option><span style="color: #20c997;">Job Title</span></option>
-                <option><span style="color: #20c997;">Senior Atlassian Administrator</span></option>
-                <option><span style="color: #20c997;">Junior Atlassian Administrator</span></option>
-            </select>
+          <select class="form-select" id="job-title" style="color:#6DC7C1;">
+            <option><span style="color: #20c997;">Senior Atlassian Administrator</span></option>
+            <option><span style="color: #20c997;">Junior Atlassian Administrator</span></option>
+            <option><span style="color: #20c997;">Atlassian Consultant</span></option>
+            <option><span style="color: #20c997;">Atlassian Support Engineer</span></option>
+            <option><span style="color: #20c997;">Atlassian Developer</span></option>
+            <option><span style="color: #20c997;">Atlassian Architect</span></option>
+            <option><span style="color: #20c997;">Forge Developer</span></option>
+            <option><span style="color: #20c997;">UI/UX Designer</span></option>
+        </select>
         </div>
         <div class="col-md-3 mb-3">
             <select class="form-select" style="color:#6DC7C1;">
@@ -515,19 +530,19 @@
             <select class="form-select"style="color:#6DC7C1";>
                 <option><span style="color: #20c997;">Location</span></option>
                 <option><span style="color: #20c997;">Cuddalore</span></option>
-                <option><span style="color: #20c997;">Virudhachalam</span></option>
+                
             </select>
         </div>
         <div class="col-md-3 mb-3">
-            <button class="btn w-50" style= "background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"> <img src="{%static 'img/lens.png'%}"  style="width:17px;height:17px;margin-right:5px;"> Search</button>
+            <button class="btn w-50"  onclick="searchJob()"style= "background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));"> <img src="{%static 'img/lens.png'%}"  style="width:17px;height:17px;margin-right:5px;"> Search</button>
 
         </div>
     </div>
 
     <div class="row" style="margin-top: 150px;">
         <div class="col-md-6">
-            <div class="job-card">
-                <h5><span style="color:#6DC7C1";>Senior Atlassian Administrator</span></h5>
+          <div class="job-card" data-job="Senior Atlassian Administrator">
+                <h5><span style="color:#6DC7C1">Senior Atlassian Administrator</span></h5>
                 <p>We are seeking a detail-oriented Junior Jira Administrator to join our dynamic team at ThriveTech. As a Junior Jira Administrator, you will assist in managing and maintaining our Atlassian Jira environment. Your role will include configuring Jira projects, workflows, and permissions, ensuring smooth operation for teams across the company.</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -535,13 +550,13 @@
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                     </div>
-                    <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button>
+                   <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="job-card">
-                <h5><span style="color:#6DC7C1";>Junior Atlassian Administrator</span></h5>
+          <div class="job-card" data-job="Junior Atlassian Administrator">
+                <h5><span style="color:#6DC7C1">Junior Atlassian Administrator</span></h5>
                 <p>We are seeking a detail-oriented Junior Jira Administrator to join our dynamic team at ThriveTech. As a Junior Jira Administrator, you will assist in managing and maintaining our Atlassian Jira environment. Your role will include configuring Jira projects, workflows, and permissions, ensuring smooth operation for teams across the company.</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div>
@@ -549,12 +564,12 @@
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                     </div>
-                    <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));border-radius:6px;margin-left:-20px;">Apply now</button>
+                    <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="job-card">
+          <div class="job-card" data-job="Atlassian Consultant">
                 <h5><span style="color:#6DC7C1";>Atlassian Consultant</span></h5>
                 <p>We are seeking a detail-oriented Junior Jira Administrator to join our dynamic team at ThriveTech. As a Junior Jira Administrator, you will assist in managing and maintaining our Atlassian Jira environment. Your role will include configuring Jira projects, workflows, and permissions, ensuring smooth operation for teams across the company.</p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -563,13 +578,13 @@
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                     </div>
-                    <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));border-radius:6px;margin-left:-20px;">Apply now</button>
+                    <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
                 </div>
             </div>
         </div>
         
         <div class="col-md-6">
-            <div class="job-card">
+          <div class="job-card" data-job="Atlassian Support Engineer">
                 <h5><span style="color:#6DC7C1";>Atlassian Support Engineer</span></h5>
                 <p>We are seeking a detail-oriented Junior Jira Administrator to join our dynamic team at ThriveTech. As a Junior Jira Administrator, you will assist in managing and maintaining our Atlassian Jira environment. Your role will include configuring Jira projects, workflows, and permissions, ensuring smooth operation for teams across the company.</p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -578,7 +593,7 @@
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                     </div>
-                    <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));border-radius:6px;margin-left:-20px;">Apply now</button>
+                    <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
                 </div>
             </div>
         </div>
@@ -587,7 +602,7 @@
 
     <div class="row">
         <div class="col-md-6">
-            <div class="job-card">
+          <div class="job-card" data-job="Atlassian Developer">
                 <h5><span style="color:#6DC7C1;">Atlassian Developer</span></h5>
                 <p>We are seeking a detail-oriented Junior Jira Administrator to join our dynamic team at ThriveTech. As a Junior Jira Administrator, you will assist in managing and maintaining our Atlassian Jira environment. Your role will include configuring Jira projects, workflows, and permissions, ensuring smooth operation for teams across the company.</p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -596,12 +611,12 @@
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                     </div>
-                    <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));border-radius:6px;margin-left:-20px;">Apply now</button>
+                    <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="job-card">
+          <div class="job-card" data-job="Atlassian Architect">
                 <h5><span style="color:#6DC7C1";>Atlassian Architect</span></h5>
                 <p>we’re looking for a Jira Architect to design, implement, and optimize Jira solutions that enhance project management and collaboration across teams. If you're an expert in Atlassian tools and passionate about creating efficient workflows, this is the perfect role for you.</p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -610,12 +625,12 @@
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                         <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                     </div>
-                    <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));border-radius:6px;margin-left:-20px;">Apply now</button>
+                    <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-          <div class="job-card">
+          <div class="job-card" data-job="Forge Developer">
               <h5><span style="color:#6DC7C1";>Forge Developer</span></h5>
               <p>We are seeking a detail-oriented >Forge Developer to join our dynamic team at ThriveTech. As a Forge Developer, you will assist in managing and maintaining our Atlassian Jira environment. Your role will include configuring Jira projects, workflows, and permissions, ensuring smooth operation for teams across the company.</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -624,12 +639,12 @@
                       <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                       <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                   </div>
-                  <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));border-radius:6px;margin-left:-20px;">Apply now</button>
-              </div>
+                  <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
+                </div>
           </div>
       </div>
       <div class="col-md-6">
-        <div class="job-card">
+        <div class="job-card" data-job="UI/UX Designer">
             <h5><span style="color:#6DC7C1";>UI/UX Designer</span></h5>
             <p>We are seeking a detail-oriented UI/UX Designer to join our dynamic team at ThriveTech. As a UI/UX Designer, you will assist in managing and maintaining our Atlassian Jira environment. Your role will include configuring Jira projects, workflows, and permissions, ensuring smooth operation for teams across the company.</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -638,7 +653,7 @@
                     <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Remote</span>
                     <span class="badge"style="border: 1px solid rgba(109, 199, 193, 1);height:Hug(90px);width:Hug(26px);border-radius:20px;padding: 4px 17px 4px 17px;">Hybrid</span>
                 </div>
-                <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));border-radius:6px;margin-left:-20px;">Apply now</button>
+                <a href="{%url 'form'%}" style="color:white"> <button class="btn btn-apply"style="background: var(--aq-g, linear-gradient(rgba(109, 199, 193, 1),rgba(81, 148, 144, 1),rgba(53, 97, 94, 1)));;border-radius:6px;margin-left:-20px;">Apply now</button></a>
             </div>
         </div>
     </div>
@@ -947,6 +962,30 @@
  
  
  </script>
+ <script>
+  function searchJob() {
+    // Get the selected job title
+    var selectedJob = document.getElementById("job-title").value;
+
+    // Get all job cards
+    var jobCards = document.querySelectorAll(".job-card");
+
+    // Loop through job cards and hide those that don't match the selected job title
+    jobCards.forEach(function(card) {
+        var jobTitle = card.getAttribute("data-job");
+
+        if (selectedJob === "" || jobTitle === selectedJob) {
+            // Show matching job cards
+            card.style.display = "block";
+           
+        } else {
+            // Hide non-matching job cards
+            card.style.display = "none";
+        }
+    });
+}
+
+</script>
 </body>
 </body>
 </html>

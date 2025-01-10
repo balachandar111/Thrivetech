@@ -12,6 +12,7 @@ urlpatterns = [
     path('Uiux/',views.uiux,name='uiux'),
     path('Website/',views.website,name='website'),
     path('Forge/',views.forge,name='forge'),
+     path('Form/',views.form,name='form'),
     
     
 ]
